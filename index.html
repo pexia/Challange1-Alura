@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es"></html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Encriptador de Texto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <header class="header">
+            <img src="assets/Logo.png" class="logo" alt="Logo de Alura">
+
+        </header>
+
+        <main>
+            <div class="main-content">
+                <section class="text_in">
+                    <textarea class="textarea" cols="30" rows="10"
+                        placeholder="Ingrese el texto aqui"></textarea>
+                    <div class="info">
+                        <h6 class="info">Solo letras minúsculas y sin acentos</h6>
+                    </div>
+                    <div class="error-message" id="error-message">Por favor, ingrese solo letras minúsculas y espacios.</div>
+                    <div class="buttons">
+                        <button onclick="btnEncriptar()" class="btn-encriptar">Encriptar</button>
+                        <button onclick="btnDesencriptar()" class="btn-desencriptar">Desencriptar</button>
+                    </div>
+                </section>
+                <section class="result">
+                    <textarea class="text-out" cols="20" rows="10"></textarea>
+                    <div>
+                        <button type="submit" class="btn-copy">Copiar</button>
+                    </div>
+                </section>
+            </div>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <p class="copyright">&copy; Copyright 2024 - Encriptador de texto - desarrollado por Jo Marcioni</p>
+        </footer>
+
+
+
+        <script src="app.js"></script>
+    </body>
+</html>
