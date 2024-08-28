@@ -1,0 +1,217 @@
+:root {
+    --primer--color: #F3F5FC;
+    --secondary--color: #0A3871;
+    --tercer--color: white;
+    --cuarto--color: #D8DFE8;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    font-size: 24px;
+    background: var(--primer--color);
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/*HEADER*/
+.logo {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 10vh;
+}
+
+/*Sección izquierda*/
+.text-in {
+    flex: 2;
+}
+
+.textarea {
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    color: var(--secondary--color);
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder {
+    color: var(--secondary--color);
+}
+
+.textarea:focus {
+    outline: none;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 18px;
+    gap: 10%;
+}
+
+.btn-encriptar {
+    width: 20vw;
+    height: 7vh;
+    cursor: pointer;
+    color: var(--tercer--color);
+    background-color: var(--secondary--color);
+    border: none;
+    border-radius: 15px;
+}
+
+.btn-desencriptar {
+    width: 20vw;
+    height: 7vh;
+    cursor: pointer;
+    color: var(--secondary--color);
+    background-color: var(--cuarto--color);
+    border: 1px solid var(--secondary--color);
+    border-radius: 15px;
+}
+
+.info {
+    color: #495957;
+    font-size: 16px;
+}
+
+.error-message {
+    display: none;  /* Ocultar el mensaje por defecto */
+    color: red;
+    background-color: #fdd;
+    border: 1px solid red;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*Sección derecha*/
+.result {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 94%;
+    align-items: center;
+}
+
+.text-out {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    background: var(--tercer--color);
+    background-image: url("/assets/Muñeco.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 25px;
+    color: var(--secondary--color);
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text-out:focus {
+    outline: none;
+}
+
+.btn-copy {
+    width: 20vw;
+    height: 7vh;
+    cursor: pointer;
+    color: var(--tercer--color);
+    background-color: var(--secondary--color);
+    border: none;
+    border-radius: 15px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary--color);
+    color: var(--primer--color);
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.copyright {
+    font-size: 14px;
+    color: var(--primer--color);
+    background-color: var(--secondary--color);
+}
+
+@media (max-width: 768px) {
+    /* Estilos para dispositivos con pantallas más pequeñas, como tablets */
+    .main-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text-in, .result {
+        width: 100%;
+    }
+
+    .textarea, .text-out {
+        width: 100%;
+        max-width: none;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-encriptar, .btn-desencriptar, .btn-copy {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .logo {
+        width: 20vh; /* Ajusta el tamaño del logo en tablets */
+    }
+
+    .error-message {
+        font-size: 12px; /* Ajusta el tamaño de la fuente del mensaje de error */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Estilos para dispositivos móviles */
+    .header, .footer {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 25vh; /* Ajusta el tamaño del logo en móviles */
+    }
+
+    .textarea, .text-out {
+        font-size: 18px; /* Ajusta el tamaño de la fuente en áreas de texto */
+    }
+
+    .btn-encriptar, .btn-desencriptar, .btn-copy {
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .error-message {
+        font-size: 12px;
+    }
+}
